@@ -1,0 +1,30 @@
+
+plugins {
+    // Apply the application plugin to add support for building a CLI application in Java.
+    id 'java' // 자바 관련 작업을 수행 할 때 사용 할 도구 추가
+    id 'eclipse' //이클립스 관련 작업을 수행 할 때 사용 할 도구 추가
+}
+
+repositories {
+    // Use Maven Central for resolving dependencies.
+    mavenCentral()
+}
+
+dependencies {
+
+    testImplementation 'junit:junit:4.13.1'
+    implementation 'com.google.guava:guava:30.0-jre'
+}
+
+// 자바 소스를 컴파일 할 때 적용할 옵션
+tasks.withType(JavaCompile) {
+    // $javac -encoding UTF-8 ...
+    options.encoding = 'UTF-8';
+}
+
+// eclipse 프로젝트 이름을 설정하기
+eclipse {
+    project {
+        name = "problem"
+    }
+}
