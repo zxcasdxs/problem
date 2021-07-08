@@ -18,7 +18,7 @@ public class arr2577 {
     int[] arr = new int[length];
     int[] arr2 = new int[10];
     
-    for(int i = 0; i < arr.length; i++) {
+    for(int i = 0; i < arr.length;i++) {
       arr[i] = result % 10;
       result /= 10;
       for(int j = 0; j < arr2.length; j++) {
